@@ -11,12 +11,32 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
         '@mdm/admin' => '@vendor/mdmsoft/yii2-admin/migrations',
+        '@backstage' => '@app/modules/backstage',
+    ],
+    'modules' => [
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+            'layout' => '@backstage/views/layouts/layout1', // it can be '@path/to/your/layout'.
+            'controllerMap' => [
+                'assignment' => [
+                    'class' => 'mdm\admin\controllers\AssignmentController',
+                    'userClassName' => 'app\models\User',
+                    'idField' => 'user_id'
+                ],
+                'other' => [
+                    'class' => 'app\modules\backstage\Module', // add another controller
+                ],
+            ],
+        ],
+//        'backstage' => [
+//            'class' => 'app\modules\backstage\Module',
+//        ]
     ],
     'components' => [
-        'view' => [
-            'theme' => [
-                'pathMap' => [
-                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
+        'assetManager' => [
+            'bundles' => [
+                'dmstr\web\AdminLteAsset' => [
+                    'skin' => 'skin-blue',
                 ],
             ],
         ],
@@ -27,9 +47,13 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            "defaultRoles" => ["guest"],
+        ],
         'user' => [
             'identityClass' => 'app\models\User',
+            'loginUrl' => ['admin/user/login'],
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -65,16 +89,10 @@ $config = [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'site/*',
-            'admin/*',
+            '*',
         ]
     ],
-    'modules' => [
-        'admin' => [
-            'class' => 'mdm\admin\Module',
-//            'layout' => 'left-menu'
-        ],
-    ],
+   
     'params' => $params,
 ];
 
