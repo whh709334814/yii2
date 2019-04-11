@@ -74,10 +74,11 @@ class BaseController extends Controller
             $menuFilePath = Yii::getAlias('@app/config/menu.php');
             $menuConfig = require_once $menuFilePath;
             $menus = $menuConfig['menu'];
+
 //            $activeTag = '';
 //            $menus = $this->normalizeMenu($menus, $activeTag);
 //            if (isset($menus[$activeTag]['items'])) {
-//                $this->leftMenu = $menus['data']['items'];
+//                $this->leftMenu = $menus[$activeTag]['items'];
 //            } else {
 //                $this->leftMenu = [];
 //            }

@@ -37,6 +37,11 @@
             "enabled": false
         }
     },
+    "autoload": {
+        "files": [
+            "common/components/GlobalFunctions.php"
+        ]
+    },
     "scripts": {
         "post-install-cmd": [
             "yii\\composer\\Installer::postInstall"

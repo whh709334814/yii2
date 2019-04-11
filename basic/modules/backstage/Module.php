@@ -22,7 +22,7 @@ class Module extends \yii\base\Module
      * {@inheritdoc}
      */
     public function init()
-    {var_dump(23);
+    {
         parent::init();
         // custom initialization code goes here
     }
