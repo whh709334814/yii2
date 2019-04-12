@@ -5,6 +5,7 @@ use yii\helpers\Html;
 /* @var $content string */
 
 if (Yii::$app->controller->action->id === 'login') {
+
 /**
  * Do not use this code in your template. Remove it.
  * Instead, use the code  $this->layout = '//main-login'; in your controller.
@@ -54,9 +55,23 @@ if (Yii::$app->controller->action->id === 'login') {
             'content.php',
             ['content' => $content, 'directoryAsset' => $directoryAsset]
         ) ?>
-
+        <input type="hidden" id="action" value="<?= urldecode(Yii::$app->request->url) ?>">
     </div>
-
+<?php
+$js = <<<JS
+    $('.treeview-menu li').each(function() {
+        var new_u = $("#action").val().substr(0,$("#action").val().lastIndexOf('/')+1);
+        var url_js = decodeURIComponent($(this).children().attr('href'));
+        var u = url_js.substr(0,url_js.lastIndexOf('/')+1);
+        if (new_u ==u){
+            $(this).parent().parent().addClass('active');
+            $(this).parent().parent().addClass('menu-open');
+            $(this).attr('class','active');
+        }
+    })
+JS;
+$this->registerJs($js);
+?>
     <?php $this->endBody() ?>
     </body>
     </html>

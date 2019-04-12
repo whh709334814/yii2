@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 /* @var $this \yii\web\View */
 /* @var $content string */
-$route =$this->context->module->id.'/'.$this->context->id.'/'.$this->context->action->id;
+
 ?>
 
 <header class="main-header">
@@ -16,8 +16,8 @@ $route =$this->context->module->id.'/'.$this->context->id.'/'.$this->context->ac
         </a>
         <div class="navbar-custom-menu" style="float: left;">
             <ul class="nav navbar-nav">
-                <?php foreach (topMenu($route)['top'] as $k=>$p_menu): ?>
-                    <li class="<?= $p_menu['active']?'open':'' ?>"><?= Html::a($p_menu['label'],$p_menu['url'],['data' => [ 'method' => 'post']])?></li>
+                <?php foreach (topMenu() as $k=>$p_menu): ?>
+                    <li><?= Html::a($p_menu['label'],$p_menu['url'],['data' => [ 'method' => 'post']])?></li>
                 <?php endforeach; ?>
             </ul>
         </div>

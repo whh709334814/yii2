@@ -1,5 +1,6 @@
 <?php
-$route =$this->context->module->id.'/'.$this->context->id.'/'.$this->context->action->id;
+$route ='/'.$this->context->module->id.'/'.$this->context->id.'/'.$this->context->action->id;
+use mdm\admin\components\Helper;
 
 ?>
 <aside class="main-sidebar">
@@ -29,11 +30,22 @@ $route =$this->context->module->id.'/'.$this->context->id.'/'.$this->context->ac
 <!--            </div>-->
 <!--        </form>-->
         <!-- /.search form -->
+        <?php
+        $menuItems = Helper::filter(mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id,leftMenu($route)));
+//        if(Helper::checkRoute('create')){
+//            echo Html::a(Yii::t('rbac-admin', 'Create'), ['create', 'id' => $this->context->module->id], [
+//                'class' => 'btn btn-danger',
+//                'data-confirm' => Yii::t('rbac-admin', 'Are you sure to delete this item?'),
+//                'data-method' => 'post',
+//            ]);
+//        }
 
+        ?>
         <?= dmstr\widgets\Menu::widget(
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
-                'items' => topMenu($route)['left']
+                'items' => $menuItems,
+                //'template' => Helper::filterActionColumn('{view}{create}{posting}')
 //                'items' => [
 //                    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
 //                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],

@@ -12,26 +12,31 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
         '@mdm/admin' => '@vendor/mdmsoft/yii2-admin/migrations',
         '@backstage' => '@app/modules/backstage',
+        '@front' => '@app/modules/front',
     ],
     'modules' => [
         'admin' => [
             'class' => 'mdm\admin\Module',
-            'layout' => '@backstage/views/layouts/layout1', // it can be '@path/to/your/layout'.
+            'layout' => '@backstage/views/layouts/layout1', // it can be '@path/to/your/layout'.@backstage/views/layouts/layout1
             'controllerMap' => [
                 'assignment' => [
                     'class' => 'mdm\admin\controllers\AssignmentController',
-                    'userClassName' => 'app\models\User',
+                    'userClassName' => 'app\modules\backstage\models\User',
                     'idField' => 'user_id'
                 ],
                 'other' => [
-                    'class' => 'app\modules\backstage\Module', // add another controller
+                    //'class' => 'app\modules\backstage\Module', // add another controller
                 ],
             ],
         ],
-//        'backstage' => [
-//            'class' => 'app\modules\backstage\Module',
-//        ]
+        'backstage' => [
+            'class' => 'app\modules\backstage\Module',
+        ],
+        'front' => [
+            'class' => 'app\modules\front\Module',
+        ]
     ],
+    'language' => 'zh-CN',
     'components' => [
         'assetManager' => [
             'bundles' => [
@@ -52,9 +57,12 @@ $config = [
             "defaultRoles" => ["guest"],
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
-            'loginUrl' => ['admin/user/login'],
+          //  'class' => 'yii\web\User',
+            'identityClass' => 'app\modules\backstage\models\User',
+            'idParam' => '__admin',
+            'identityCookie' => ['name' => '__admin_identity', 'httpOnly' => true],
             'enableAutoLogin' => true,
+            'loginUrl' => ['backstage/public/login'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

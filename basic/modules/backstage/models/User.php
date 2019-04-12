@@ -1,8 +1,8 @@
 <?php
 
-namespace app\models;
+namespace app\modules\backstage\models;
 
-class User extends  \mdm\admin\models\user
+class User extends  \mdm\admin\models\User
 {
 
 }
