@@ -10,30 +10,33 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
-        '@mdm/admin' => '@vendor/mdmsoft/yii2-admin/migrations',
+//        '@mdm/admin' => '@vendor/mdmsoft/yii2-admin/migrations',
         '@backstage' => '@app/modules/backstage',
         '@front' => '@app/modules/front',
     ],
     'modules' => [
-        'admin' => [
-            'class' => 'mdm\admin\Module',
-            'layout' => '@backstage/views/layouts/layout1', // it can be '@path/to/your/layout'.@backstage/views/layouts/layout1
-            'controllerMap' => [
-                'assignment' => [
-                    'class' => 'mdm\admin\controllers\AssignmentController',
-                    'userClassName' => 'app\modules\backstage\models\User',
-                    'idField' => 'user_id'
-                ],
-                'other' => [
-                    //'class' => 'app\modules\backstage\Module', // add another controller
-                ],
-            ],
-        ],
+//        'admin' => [
+//            'class' => 'mdm\admin\Module',
+//            'layout' => 'left-menu', // it can be '@path/to/your/layout'.@backstage/views/layouts/layout1
+//            'controllerMap' => [
+//                'assignment' => [
+//                    'class' => 'mdm\admin\controllers\AssignmentController',
+//                    'userClassName' => 'app\modules\backstage\models\User',
+//                    'idField' => 'user_id'
+//                ],
+//                'other' => [
+//                    //'class' => 'app\modules\backstage\Module', // add another controller
+//                ],
+//            ],
+//        ],
         'backstage' => [
             'class' => 'app\modules\backstage\Module',
         ],
         'front' => [
             'class' => 'app\modules\front\Module',
+        ],
+        'treemanager' =>  [
+            'class' => '\kartik\tree\Module',
         ]
     ],
     'language' => 'zh-CN',
@@ -56,13 +59,20 @@ $config = [
             'class' => 'yii\rbac\DbManager',
             "defaultRoles" => ["guest"],
         ],
-        'user' => [
-          //  'class' => 'yii\web\User',
-            'identityClass' => 'app\modules\backstage\models\User',
+        'user' =>[
+            'identityClass' => 'app\models\User',
+            'idParam' => '__front',
+            'identityCookie' => ['name' => '__front_identity', 'httpOnly' => true],
+            'enableAutoLogin' => true,
+            'loginUrl' => ['public/login'],
+        ],
+        'admin' => [
+            'class' => 'yii\web\User',
+            'identityClass' => 'backstage\models\Admin',
             'idParam' => '__admin',
             'identityCookie' => ['name' => '__admin_identity', 'httpOnly' => true],
             'enableAutoLogin' => true,
-            'loginUrl' => ['backstage/public/login'],
+            'loginUrl' => ['/backstage/public/login'],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -94,13 +104,13 @@ $config = [
         ],
         */
     ],
-    'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
-        'allowActions' => [
-            '*',
-        ]
-    ],
-   
+//    'as access' => [
+//        'class' => 'mdm\admin\components\AccessControl',
+//        'allowActions' => [
+//            '*',
+//        ]
+//    ],
+//    'params' => array_merge($params, ['menu' => $menu]),
     'params' => $params,
 ];
 
@@ -112,12 +122,16 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
-
-    $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
-        // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'generators' => [ // HERE
+            'crud' => [
+                'class' => 'yii\gii\generators\crud\Generator',
+                'templates' => [
+                    'adminlte' => '@vendor/dmstr/yii2-adminlte-asset/gii/templates/crud/simple',
+                ]
+            ]
+        ],
     ];
 }
 

@@ -2,55 +2,42 @@
 namespace backstage\controllers;
 
 use yii\web\Controller;
+use backstage\models\Admin;
 use Yii;
-use app\modules\backstage\models\LoginForm;
 
 class PublicController extends Controller
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
-    /**
-     * Login action.
-     *
-     * @return Response|string
-     */
     public function actionLogin()
     {
-        $this->layout = 'layout1';
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+//        $this->layout = false;
+        $model = new Admin;
+        if (Yii::$app->request->isPost) {
+            $post = Yii::$app->request->post();
+            if ($model->login($post)) {
+                $this->redirect(['site/index']);
+                Yii::$app->end();
+            }
         }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+        return $this->render("login", ['model' => $model]);
     }
 
     public function actionLogout()
     {
-
         Yii::$app->admin->logout(false);
         return $this->goback();
     }
 
+    public function actionSeekpassword()
+    {
+        $this->layout = false;
+        $model = new Admin;
+        if (Yii::$app->request->isPost) {
+            $post = Yii::$app->request->post();
+            if ($model->seekPass($post)) {
+                Yii::$app->session->setFlash('info', '电子邮件已经发送成功，请查收');
+            }
+        }
+        return $this->render("seekpassword", ['model' => $model]);
+    }
 
 }

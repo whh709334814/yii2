@@ -1,40 +1,44 @@
 <?php
 
 return [
-    'menu'=>[
-        'data'=> ['label'=>'主页','items'=>[
-                ['label' => '主页1',
-                    'items' => [
-                        ['label' => '主页概览', 'url' => ['/backstage/site']],
-                        ['label' => '分类管理', 'url' => ['/backstage/category']],
-                        ['label' => '主页2', 'url' => ['/backstage/site']]
-                    ]
-                ],
-                ['label' => '机构列表',
-                    'items' => [
-                        ['label' => '机构列表', 'url' => ['/admin/organ']],
-                        ['label' => '等级列表', 'url' => ['/admin/level']],
-                        ['label' => '机构列表2', 'url' => ['/site3']]
-                    ]
-                ],
-            ]
-        ],
-        'setting'=> ['label'=>'系统设置', 'items'=>[
-                ['label' => '权限管理',
-                    'items' => [
-                        ['label' => '管理员管理','url' => ['/admin/user']],
-                        ['label' => '角色管理', 'url' => ['/admin/roles']],
-                        ['label' => '权限列表', 'url' => ['/admin/permission']],
-                        ['label' => '路由列表', 'url' => ['/admin/route']],
-                        ['label' => '规则列表', 'url' => ['/admin/rule']]
-                    ]
-                ],
-                ['label' => '个人中心',
-                    'items' => [
-                        ['label' => '修改密码', 'url' => ['/admin/personal/reset-password']],
-                    ]
+        ['label'=>'系统','url'=>['rbac/roles'], 'items'=>[
+            ['label' => '权限管理', 'url' => ['rbac/roles'],
+                'items' => [
+                    ['label' => '创建角色', 'url' =>['rbac/createrole'] ],
+                    ['label' => '角色列表', 'url' =>['rbac/roles']],
+                    ['label' => '创建规则', 'url' =>['rbac/createrule']],
                 ]
-            ]
-        ]
-    ]
-];
+            ],
+            ['label'=>'管理员管理', 'url' => ['manage/managers'],
+                'items' => [
+                    ['label' => '管理员列表', 'url' =>['manage/managers']],
+                    ['label' => '添加管理员', 'url' =>['manage/reg']]
+                ]
+            ],
+    //                ['label' => '个人中心', 'url' => ['manage/managers'],
+    //                    'items' => [
+    //                        ['label' => '修改密码', 'url' => ['/admin/personal/reset-password']],
+    //                    ]
+    //                ]
+        ]],
+        ['label'=>'主页','url'=>['site/index'], 'items'=>[
+            ['label' => '主页', 'url' => ['site/index'],
+                'items' => [
+                    ['label' => '主页1', 'url' =>['organ/index'] ],
+//                    ['label' => '主页2', 'url' =>['rbac/roles']],
+//                    ['label' => '主页3', 'url' =>['rbac/createrule']],
+                ]
+            ],
+            ['label'=>'分类管理', 'url' => ['category/index'],
+                'items' => [
+                    ['label' => '分类管理', 'url' =>['category/index']]
+                ]
+            ],
+//            ['label'=>'管理员管理', 'url' => ['manage/managers'],
+//                'items' => [
+//                    ['label' => '管理员列表', 'url' =>['manage/managers']],
+//                    ['label' => '添加管理员', 'url' =>['manage/reg']]
+//                ]
+//            ],
+        ]]
+    ];

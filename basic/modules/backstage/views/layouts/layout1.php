@@ -66,7 +66,7 @@ $js = <<<JS
         if (new_u ==u){
             $(this).parent().parent().addClass('active');
             $(this).parent().parent().addClass('menu-open');
-            $(this).attr('class','active');
+            // $(this).attr('class','active');
         }
     })
 JS;

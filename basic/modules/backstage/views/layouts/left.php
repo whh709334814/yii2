@@ -1,6 +1,6 @@
 <?php
-$route ='/'.$this->context->module->id.'/'.$this->context->id.'/'.$this->context->action->id;
-use mdm\admin\components\Helper;
+
+$route = $this->context->id.'/'.$this->context->action->id;
 
 ?>
 <aside class="main-sidebar">
@@ -13,7 +13,7 @@ use mdm\admin\components\Helper;
                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p><?= yii::$app->user->identity->username ?></p>
+                <p><?= yii::$app->admin->identity->adminuser ?></p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -31,7 +31,7 @@ use mdm\admin\components\Helper;
 <!--        </form>-->
         <!-- /.search form -->
         <?php
-        $menuItems = Helper::filter(mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id,leftMenu($route)));
+//        $menuItems = Helper::filter(mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id,leftMenu($route)));
 //        if(Helper::checkRoute('create')){
 //            echo Html::a(Yii::t('rbac-admin', 'Create'), ['create', 'id' => $this->context->module->id], [
 //                'class' => 'btn btn-danger',
@@ -39,12 +39,11 @@ use mdm\admin\components\Helper;
 //                'data-method' => 'post',
 //            ]);
 //        }
-
         ?>
         <?= dmstr\widgets\Menu::widget(
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
-                'items' => $menuItems,
+                'items' => leftMenu($route),
                 //'template' => Helper::filterActionColumn('{view}{create}{posting}')
 //                'items' => [
 //                    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
