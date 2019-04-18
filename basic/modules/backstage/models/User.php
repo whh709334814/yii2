@@ -1,8 +1,9 @@
 <?php
 
 namespace backstage\models;
+use yii\db\ActiveRecord;
 
-class User extends  \mdm\admin\models\User
+class User extends ActiveRecord
 {
-
+//ActiveRecord
 }

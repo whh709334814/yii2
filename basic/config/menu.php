@@ -21,10 +21,10 @@ return [
     //                    ]
     //                ]
         ]],
-        ['label'=>'主页','url'=>['site/index'], 'items'=>[
-            ['label' => '主页', 'url' => ['site/index'],
+        ['label'=>'主页','url'=>['organ/*'], 'items'=>[
+            ['label' => '机构管理', 'url' => ['organ/site'],
                 'items' => [
-                    ['label' => '主页1', 'url' =>['organ/index'] ],
+                    ['label' => '机构列表', 'url' =>['organ/site'] ],
 //                    ['label' => '主页2', 'url' =>['rbac/roles']],
 //                    ['label' => '主页3', 'url' =>['rbac/createrule']],
                 ]

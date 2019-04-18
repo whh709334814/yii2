@@ -15,7 +15,6 @@ use yii\data\ActiveDataProvider;
  */
 class OrganSearch extends Admin
 {
-    public $organ_name;
 
     public static function tableName()
     {
