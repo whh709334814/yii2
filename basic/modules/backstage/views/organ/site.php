@@ -1,12 +1,14 @@
 <?php
 use yii\grid\GridView;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 $this->title = '机构管理';
 $this->params['breadcrumbs'][] = ['label' => '机构管理', 'url' => ['organ/site']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="row-fluid table">
+
+<div class="box-header with-border">
     <?php
     $form = ActiveForm::begin(['method'=>'get',
         'fieldConfig' => [
@@ -22,10 +24,18 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'organ_id')->textInput(); ?>
     <?= Html::submitButton('搜索', ['class' => 'btn btn-primary']); ?>
     <?php ActiveForm::end(); ?>
-    <a href="<?php echo yii\helpers\Url::to(['organ/add']) ?>" class="btn btn-primary pull-right">
-        <span>&#43;</span>
-        添加机构
-    </a>
+    <div class="box-tools pull-right">
+        <!-- Buttons, labels, and many other things can be placed here! -->
+        <!-- Here is a label for example -->
+        <a href="<?php echo yii\helpers\Url::to(['organ/add']) ?>" class="btn btn-primary pull-right">
+            <span>&#43;</span>
+            添加机构
+        </a>
+<!--        <span class="label label-primary">Label</span>-->
+    </div><!-- /.box-tools -->
+</div><!-- /.box-header -->
+<div class="box-body">
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [

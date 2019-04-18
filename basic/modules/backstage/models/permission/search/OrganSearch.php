@@ -31,8 +31,8 @@ class OrganSearch extends Admin
     public function attributeLabels()
     {
         return [
-            'organ_name' => '机构名称',
-            'organ_id' => '机构'
+            'organ_name' => '机构名称：',
+            'organ_id' => '机构：'
         ];
     }
 
