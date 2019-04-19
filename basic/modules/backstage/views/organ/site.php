@@ -19,7 +19,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]);
     ?>
-
     <?= $form->field($model, 'organ_name')->textInput(); ?>
     <?= $form->field($model, 'organ_id')->textInput(); ?>
     <?= Html::submitButton('搜索', ['class' => 'btn btn-primary']); ?>
