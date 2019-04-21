@@ -3,7 +3,7 @@ use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 $this->title = '机构添加';
-$this->params['breadcrumbs'][] = ['label' => '机构添加', 'url' => ['organ/index']];
+$this->params['breadcrumbs'][] = ['label' => '机构管理', 'url' => ['organ/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="box-header with-border">

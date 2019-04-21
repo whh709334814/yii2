@@ -31,6 +31,9 @@ $route = $this->context->id.'/'.$this->context->action->id;
 <!--        </form>-->
         <!-- /.search form -->
         <?php
+       // leftMenu($route);
+        ?>
+        <?php
 //        $menuItems = Helper::filter(mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id,leftMenu($route)));
 //        if(Helper::checkRoute('create')){
 //            echo Html::a(Yii::t('rbac-admin', 'Create'), ['create', 'id' => $this->context->module->id], [

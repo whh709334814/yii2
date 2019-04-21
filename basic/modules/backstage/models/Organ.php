@@ -24,10 +24,28 @@ class Organ extends ActiveRecord
     public function rules()
     {
         return [
-            [['level_id', 'user_id', 'province_id', 'city_id', 'district', 'organ_state', 'organ_sort', 'organ_time', 'organ_end_time', 'is_recommend', 'is_home_recommend', 'organ_credit', 'organ_collect', 'is_own_shop', 'ensure', 'deposit_icon', 'is_delete', 'goods_examine', 'domain_enable', 'createtime', 'click'], 'integer'],
+            [['level_id', 'user_id', 'province_id', 'city_id', 'district', 'organ_state', 'organ_sort',  'organ_end_time', 'is_recommend', 'is_home_recommend', 'organ_credit', 'organ_collect', 'is_own_shop', 'ensure', 'deposit_icon', 'is_delete', 'goods_examine', 'domain_enable', 'createtime', 'click'], 'integer'],
             [['organ_zy', 'organ_presales', 'intro'], 'string'],
             [['organ_servicecredit', 'deposit'], 'number'],
             [['createtime'], 'required'],
+            ['organ_time' ,  'filter', 'filter' => function(){
+                return strtotime($this->organ_time);
+            }],
+            [['organ_time','createtime'], function($attr, $params) {
+                if ($this->hasErrors()) return false;
+
+                $datetime = $this->{$attr};
+
+                $time = strtotime($datetime);
+                // 验证时间格式是否正确
+                if ($time === false) {
+                    $this->addError($attr, '时间格式错误.');
+                    return false;
+                }
+                // 将转换为时间戳后的时间赋值给time属性
+                $this->{$attr} = $time;
+                return true;
+            }],
             [['organ_name', 'user_name', 'seller_id', 'category_id', 'service_id', 'DL_area', 'DL_nation', 'organ_qq', 'organ_domain', 'organ_theme', 'feedback', 'score'], 'string', 'max' => 50],
             [['organ_adress', 'organ_workingtime'], 'string', 'max' => 100],
             [['organ_zip'], 'string', 'max' => 10],
@@ -35,6 +53,12 @@ class Organ extends ActiveRecord
             [['organ_avatar'], 'string', 'max' => 150],
             [['organ_phone'], 'string', 'max' => 20],
         ];
+    }
+    public function afterFind()
+    {
+        parent::afterFind();
+        $this->organ_time = date('Y-m-d H:i:s', $this->organ_time);
+        $this->createtime = date('Y-m-d H:i:s', $this->createtime);
     }
     public function attributeLabels()
     {
@@ -45,7 +69,8 @@ class Organ extends ActiveRecord
             'feedback'=> '好评率：',
             'score'=> '综合得分：',
             'click'=> '访问量：',
-            'organ_logo'=> 'LOGO：',
+            'organ_logo'=> '网站LOGO：',
+            'createtime'=> '创建时间：',
             'intro'=> '公司简介：',
             'category_id'=> '分类：',
         ];

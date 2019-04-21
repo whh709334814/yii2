@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0a137bb-7ba2-46ed-a18f-4e92747daa05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/models/permission/search/OrganSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/models/permission/search/OrganSearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/views/layouts/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/views/layouts/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/yii2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yii2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/common/components/GlobalFunctions.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/common/components/GlobalFunctions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/basic/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/basic/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/config/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/config/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/controllers/OrganController.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/controllers/OrganController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/models/Organ.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/models/Organ.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/models/Organ/Organ.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/models/Organ/Organ.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/views/layouts/left.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/views/layouts/left.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/views/manage/managers.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/views/manage/managers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/views/manage/reg.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/views/manage/reg.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basic/modules/backstage/views/organ/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/views/organ/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/views/organ/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/views/organ/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic/modules/backstage/views/organ/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/basic/modules/backstage/views/organ/update.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,48 +25,59 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/basic/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/organ/site.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="200">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/config/menu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/common/components/GlobalFunctions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="436">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/organ/add.php">
+        <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/layouts/left.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/modules/backstage/models/Organ/Organ.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-601">
-              <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/modules/backstage/models/permission/search/OrganSearch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="150">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+              <folding>
+                <element signature="e#1204#1330#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>krajee-datepicker</find>
+      <find>organ_time</find>
+      <find>attributeLabels</find>
+      <find>initialPreviewAsData</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +88,21 @@
         <option value="$PROJECT_DIR$/basic/modules/backstage/models/permission/search/OrganSearch.php" />
         <option value="$PROJECT_DIR$/basic/modules/backstage/views/layouts/content.php" />
         <option value="$PROJECT_DIR$/basic/modules/backstage/views/organ/site.php" />
+        <option value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-krajee-base/src/InputWidget.php" />
+        <option value="$PROJECT_DIR$/basic/modules/backstage/models/Organ/Organ.php" />
+        <option value="$PROJECT_DIR$/basic/modules/backstage/controllers/OrganController.php" />
+        <option value="$PROJECT_DIR$/basic/modules/backstage/models/Organ.php" />
+        <option value="$PROJECT_DIR$/basic/modules/front/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/basic/modules/front/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/basic/config/web.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/basic/modules/backstage/views/manage/managers.php" />
+        <option value="$PROJECT_DIR$/basic/modules/backstage/views/organ/update.php" />
+        <option value="$PROJECT_DIR$/basic/modules/backstage/views/manage/reg.php" />
         <option value="$PROJECT_DIR$/basic/modules/backstage/views/organ/add.php" />
+        <option value="$PROJECT_DIR$/basic/config/menu.php" />
+        <option value="$PROJECT_DIR$/basic/common/components/GlobalFunctions.php" />
+        <option value="$PROJECT_DIR$/basic/modules/backstage/views/layouts/left.php" />
       </list>
     </option>
   </component>
@@ -151,6 +188,9 @@
       <path value="$PROJECT_DIR$/basic/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/basic/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/basic/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-datepicker" />
+      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/bootstrap-fileinput" />
+      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-fileinput" />
     </include_path>
   </component>
   <component name="ProjectConfigurationFiles">
@@ -192,6 +232,25 @@
               <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
               <item name="yii2" type="462c0819:PsiDirectoryNode" />
               <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yii2" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yii2" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yii2" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,33 +259,6 @@
               <item name="basic" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="backstage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="permission" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="permission" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
@@ -240,16 +272,7 @@
               <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
               <item name="yii2" type="462c0819:PsiDirectoryNode" />
               <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="backstage" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="organ" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yii2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2" type="462c0819:PsiDirectoryNode" />
-              <item name="basic" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -259,9 +282,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -285,25 +310,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555599570959</updated>
-      <workItem from="1555599573759" duration="3183000" />
+      <workItem from="1555599573759" duration="9605000" />
+      <workItem from="1555770242133" duration="4370000" />
+      <workItem from="1555819790994" duration="1469000" />
+      <workItem from="1555850548318" duration="11249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3183000" />
+    <option name="totallyTimeSpent" value="26693000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1552" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25970548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -311,27 +343,49 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4986613" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6613119" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.33868808" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/models/Organ/Organ.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-601">
-          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/layouts/content.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/vendor/kartik-v/yii2-krajee-base/src/InputWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="222" column="25" selection-start-line="222" selection-start-column="25" selection-end-line="222" selection-end-column="25" />
+          <folding>
+            <element signature="e#31#37#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-datepicker/src/DatePicker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="75" column="98" lean-forward="true" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/models/Organ/Organ.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="107" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -342,17 +396,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/organ/site.php">
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/user/reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/user/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1575" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/manage/_assign.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/rbac/_createrule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-975" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/rbac/_createitem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/rbac/_assignitem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1175" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-fileinput/src/FileInput.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/models/Organ.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/web/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/front/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/config/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="22" />
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/manage/managers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="75" column="12" selection-start-line="75" selection-start-column="12" selection-end-line="79" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/controllers/OrganController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#35#43#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/front/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/organ/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="27" />
+          <folding>
+            <element signature="e#7#33#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/rbac/_items.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/manage/reg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="55" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="55" />
+          <folding>
+            <element signature="e#10#39#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/organ/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="75">
+          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/organ/site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/config/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/common/components/GlobalFunctions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/backstage/views/layouts/left.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="e#1204#1330#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

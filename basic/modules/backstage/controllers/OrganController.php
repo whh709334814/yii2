@@ -33,6 +33,7 @@ class OrganController extends BaseController
 //            $model->add(Yii::$app->request->post());
         }else{
             $model = Organ::findOne(['organ_id'=>Yii::$app->request->get('organ_id')]);
+//            $model->organ_time =date('Y-m-d H:i:s', $model->organ_time);
             return $this->render('update', ['model'=>$model]);
         }
     }

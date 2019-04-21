@@ -104,12 +104,23 @@ function topMenu(){
 
 function leftMenu($where){
     $menus = menudata();
+    $flag = 0;
     foreach ($menus as $k=>$v){
         if (in_array($where,$v['url'])==true){
-            return $menus[0]["items"];
+           return $v['items'];
         }else{
-            return $menus[1]["items"];
+            $flag =1;
         }
-
+    }
+    if ($flag == 1){
+        foreach ($menus as $k=>$v){
+            foreach ($v['items'] as $kk=>$vv){
+                foreach ($vv['items'] as $kkk=>$vvv){
+                    if (in_array($where,$vvv['url'])==true){
+                        return $v['items'];
+                    }
+                }
+            }
+        }
     }
 }

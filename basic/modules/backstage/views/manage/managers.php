@@ -1,6 +1,6 @@
 <?php
 $this->title = '管理员列表';
-$this->params['breadcrumbs'][] = ['label' => '管理员管理', 'url' => ['/admin/manage/managers']];
+$this->params['breadcrumbs'][] = ['label' => '管理员管理', 'url' => ['/backstage/manage/managers']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>

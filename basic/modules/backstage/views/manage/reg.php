@@ -2,60 +2,44 @@
     use yii\bootstrap\ActiveForm;
     use yii\helpers\Html;
     $this->title = '添加管理员';
-    $this->params['breadcrumbs'][] = ['label' => '管理员管理', 'url' => ['/admin/manage/managers']];
+    $this->params['breadcrumbs'][] = ['label' => '管理员管理', 'url' => ['/backstage/manage/managers']];
     $this->params['breadcrumbs'][] = $this->title;
 
 ?>
     <!-- main container -->
-        
-        <div class="container-fluid">
-            <div id="pad-wrapper" class="new-user">
-                <div class="row-fluid header">
-                    <h3>添加新管理员</h3>
-                </div>
+<div class="box-header with-border">
+    <div class="callout callout-info">
+        Tips:
+        <i class="icon-lightbulb pull-left"></i>
+        请在左侧填写管理员相关信息，包括管理员账号，电子邮箱，以及密码
+    </div>
+</div>
+<div class="box-body">
 
-                <div class="row-fluid form-wrapper">
-                    <!-- left column -->
-                    <div class="span9 with-sidebar">
-                        <div class="container">
 <?php
     if (Yii::$app->session->hasFlash('info')) {
         echo Yii::$app->session->getFlash('info');
     }
     $form = ActiveForm::begin([
-        'options' => ['class' => 'new_user_form inline-input'],
+        'options' => ['class' => 'form-horizontal'],
         'fieldConfig' => [
-            'template' => '<div class="span12 field-box">{label}{input}</div>{error}'
+            'template' => '{label}<div class="col-sm-6">{input}</div>{error}',
+            'labelOptions' =>['class' => 'col-sm-2 control-label']
         ],
     ]);
 ?>
-<?php echo $form->field($model, 'adminuser')->textInput(['class' => 'span9']); ?>
-<?php echo $form->field($model, 'adminemail')->textInput(['class' => 'span9']); ?>
-<?php echo $form->field($model, 'adminpass')->passwordInput(['class' => 'span9']); ?>
-<?php echo $form->field($model, 'repass')->passwordInput(['class' => 'span9']); ?>
-<div class="span11 field-box actions">
-    <?php echo Html::submitButton('创建', ['class' => 'btn-glow primary']); ?>
-    <span>或者</span>
-    <?php echo Html::resetButton('取消', ['class' => 'reset']); ?>
+<?php echo $form->field($model, 'adminuser')->textInput(); ?>
+<?php echo $form->field($model, 'adminemail')->textInput(); ?>
+<?php echo $form->field($model, 'adminpass')->passwordInput(); ?>
+<?php echo $form->field($model, 'repass')->passwordInput(); ?>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <?= Html::submitButton('提交', ['class' => 'btn btn-primary']); ?>
+        <span>OR</span>
+        <?php echo Html::resetButton('取消', ['class' => 'btn btn-primary reset']); ?>
+    </div>
 </div>
 <?php ActiveForm::end(); ?>
-                        </div>
-                    </div>
-
-                    <!-- side right column -->
-                    <div class="span3 form-sidebar pull-right">
-                        
-                        <div class="alert alert-info hidden-tablet">
-                            <i class="icon-lightbulb pull-left"></i>
-                            请在左侧填写管理员相关信息，包括管理员账号，电子邮箱，以及密码
-                        </div>                        
-                        <h6>重要提示：</h6>
-                        <p>管理员可以管理后台功能模块</p>
-                        <p>请谨慎添加</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+</div>
     <!-- end main container -->
 

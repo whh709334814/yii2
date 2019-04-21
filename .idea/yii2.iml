@@ -25,10 +25,13 @@
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/fortawesome/font-awesome" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/basic/vendor/kartik-v/bootstrap-fileinput" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/kartik-v/yii2-dialog" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/kartik-v/yii2-krajee-base" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/kartik-v/yii2-tree-manager" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/kartik-v/yii2-widget-activeform" />
+      <excludeFolder url="file://$MODULE_DIR$/basic/vendor/kartik-v/yii2-widget-datepicker" />
+      <excludeFolder url="file://$MODULE_DIR$/basic/vendor/kartik-v/yii2-widget-fileinput" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/mdmsoft/yii2-admin" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/basic/vendor/phar-io/manifest" />
