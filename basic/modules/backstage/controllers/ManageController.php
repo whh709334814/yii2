@@ -59,10 +59,12 @@ class ManageController extends BaseController
             } else {
                 Yii::$app->session->setFlash('info', '添加失败');
             }
+//            return $this->redirect(['manage/managers']);
         }
-        $model->adminpass = '';
-        $model->repass = '';
-        return $this->render('reg', ['model' => $model]);
+            $model->adminpass = '';
+            $model->repass = '';
+            return $this->render('reg', ['model' => $model]);
+
     }
 
     public function actionDel()

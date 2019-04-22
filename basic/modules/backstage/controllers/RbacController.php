@@ -6,6 +6,7 @@ use Yii;
 use \yii\data\ActiveDataProvider;
 use \yii\db\Query;
 use backstage\components\BaseController;
+use backstage\models\Rbac;
 
 class RbacController extends BaseController
 {

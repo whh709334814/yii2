@@ -31,7 +31,7 @@ $route = $this->context->id.'/'.$this->context->action->id;
 <!--        </form>-->
         <!-- /.search form -->
         <?php
-       // leftMenu($route);
+        leftMenu($route);
         ?>
         <?php
 //        $menuItems = Helper::filter(mdm\admin\components\MenuHelper::getAssignedMenu(Yii::$app->user->id,leftMenu($route)));

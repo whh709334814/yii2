@@ -4,15 +4,17 @@ return [
         ['label'=>'系统','url'=>['rbac/roles'], 'items'=>[
             ['label' => '权限管理', 'url' => ['rbac/roles'],
                 'items' => [
-                    ['label' => '创建角色', 'url' =>['rbac/createrole'] ],
+                    ['label' => '创建角色', 'url' =>['rbac/createrole'], 'options' =>['class' => 'hide']],
                     ['label' => '角色列表', 'url' =>['rbac/roles']],
                     ['label' => '创建规则', 'url' =>['rbac/createrule']],
+                    ['label' => '分配权限', 'url' =>['rbac/assignitem'], 'options' => ['class' => 'hide']],
                 ]
             ],
             ['label'=>'管理员管理', 'url' => ['manage/managers'],
                 'items' => [
                     ['label' => '管理员列表', 'url' =>['manage/managers']],
-                    ['label' => '添加管理员', 'url' =>['manage/reg']]
+                    ['label' => '添加管理员', 'url' =>['manage/reg']],
+                    ['label' => '授权', 'url' =>['manage/assign'], 'options' => ['class' => 'hide']],
                 ]
             ],
     //                ['label' => '个人中心', 'url' => ['manage/managers'],

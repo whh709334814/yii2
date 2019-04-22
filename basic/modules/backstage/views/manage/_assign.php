@@ -5,56 +5,46 @@
     $this->params['breadcrumbs'][] = ['label' => '管理员管理', 'url' => ['manage/managers']];
     $this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="callout callout-info">
+    Tips:
+    <i class="icon-lightbulb pull-left"></i>
+    请在左侧填写管理员相关信息，包括管理员账号，电子邮箱，以及密码
+</div>
     <!-- main container -->
-        <div class="container-fluid">
-            <div id="pad-wrapper" class="new-user">
-                <div class="row-fluid form-wrapper">
-                    <!-- left column -->
-                    <div class="span9 with-sidebar">
-                        <div class="container">
-                                <?php
-                                if (Yii::$app->session->hasFlash('info')) {
-                                    echo Yii::$app->session->getFlash('info');
-                                }
-                                $form = ActiveForm::begin([
-                                    'fieldConfig' => [
-                                        'template' => '<div class="span12 field-box">{label}{input}</div>{error}',
-                                    ],
-                                    'options' => [
-                                        'class' => 'new_user_form inline-input',
-                                    ],
-                                ]);
-                                ?>
-                                <div class="span12 field-box">
-                                <?php echo Html::label('管理员', null). Html::encode($admin); ?>
-                                </div>
-                                <div class="span12 field-box">
-                                <?php echo Html::label('角色', null). Html::checkboxList('children', $children['roles'], $roles); ?>
-                                </div>
-                                <div class="span12 field-box">
-                                <?php echo Html::label('权限', null). Html::checkboxList('children', $children['permissions'], $permissions); ?>
-                                </div>
-
-                                <div class="span11 field-box actions">
-                                    <?php echo Html::submitButton('授权', ['class' => 'btn-glow primary']); ?>
-                                    <span>OR</span>
-                                    <?php echo Html::resetButton('取消', ['class' => 'reset']); ?>
-                                </div>
-                            <?php ActiveForm::end(); ?>
-                        </div>
-                    </div>
-
-                    <!-- side right column -->
-                    <div class="span3 form-sidebar pull-right">
-                        <div class="alert alert-info hidden-tablet">
-                            <i class="icon-lightbulb pull-left"></i>
-                            请在左侧表单当中填入要添加的用户信息,包括用户名,密码,电子邮箱
-                        </div>
-                        <h6>商城用户说明</h6>
-                        <p>可以在前台进行登录并且进行购物</p>
-                        <p>前台也可以注册用户</p>
-                    </div>
+        <div class="box box-info">
+            <?php
+            if (Yii::$app->session->hasFlash('info')) {
+                echo Yii::$app->session->getFlash('info');
+            }
+            $form = ActiveForm::begin([
+//                        'fieldConfig' => [
+//                            'template' => '{label}<div class="span12 field-box">{input}</div>{error}',
+//                        ],
+                'options' => [
+                    'class' => 'form-horizontal',
+                ],
+            ]);
+            ?>
+        <div class="box-body">
+            <div class="form-group">
+                <?php echo Html::label('管理员：', null,['class'=>'col-sm-2 control-label']).'<div class="col-sm-10">'. Html::encode($admin); ?></div>
+            </div>
+            <div class="form-group">
+                <?php echo Html::label('角色：', null,['class'=>'col-sm-2 control-label']).'<div class="col-sm-10">'. Html::checkboxList('children', $children['roles'], $roles); ?></div>
+            </div>
+            <div class="form-group">
+                <?php echo Html::label('权限：', null,['class'=>'col-sm-2 control-label']). Html::checkboxList('children', $children['permissions'], $permissions,['class'=>'col-sm-10']); ?>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <?= Html::submitButton('提交', ['class' => 'btn btn-primary']); ?>
+                    <span>OR</span>
+                    <?php echo Html::resetButton('取消', ['class' => 'btn btn-primary reset']); ?>
                 </div>
             </div>
         </div>
+        <?php ActiveForm::end(); ?>
+    </div>
     <!-- end main container -->

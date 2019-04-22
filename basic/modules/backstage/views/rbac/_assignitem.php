@@ -2,15 +2,17 @@
     use yii\bootstrap\ActiveForm;
     use yii\helpers\Html;
     $this->title = '分配权限';
-    $this->params['breadcrumbs'][] = ['label' => '角色管理', 'url' => ['/admin/rbac/roles']];
+    $this->params['breadcrumbs'][] = ['label' => '角色管理', 'url' => ['/backstage/rbac/roles']];
     $this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="callout callout-info">
+    Tips:
+    <i class="icon-lightbulb pull-left"></i>
+    请在左侧填写管理员相关信息，包括管理员账号，电子邮箱，以及密码
+</div>
     <!-- main container -->
         <div class="container-fluid">
             <div id="pad-wrapper" class="new-user">
-                <div class="row-fluid header">
-                    <h3>分配权限</h3>
-                </div>
                 <div class="row-fluid form-wrapper">
                     <!-- left column -->
                     <div class="span9 with-sidebar">
@@ -27,12 +29,7 @@
                                         'class' => 'new_user_form inline-input',
                                     ],
                                 ]);
-                                /*echo $form->field($model, 'username')->textInput(['class' => 'span9']);
-                                echo $form->field($model, 'useremail')->textInput(['class' => 'span9']);
-                                echo $form->field($model, 'userpass')->passwordInput(['class' => 'span9']);
-                                echo $form->field($model, 'repass')->passwordInput(['class' => 'span9']);
-                                 */
-?>
+                                ?>
                                 <div class="span12 field-box">
                                 <?php echo Html::label('角色名称', null). Html::encode($parent); ?>
                                 </div>
@@ -42,7 +39,7 @@
                                 <div class="span12 field-box">
                                 <?php echo Html::label('权限子节点', null). Html::checkboxList('children', $children['permissions'], $permissions); ?>
                                 </div>
-                                
+
                                 <div class="span11 field-box actions">
                                     <?php echo Html::submitButton('分配', ['class' => 'btn-glow primary']); ?>
                                     <span>OR</span>
@@ -57,7 +54,7 @@
                         <div class="alert alert-info hidden-tablet">
                             <i class="icon-lightbulb pull-left"></i>
                             请在左侧表单当中填入要添加的用户信息,包括用户名,密码,电子邮箱
-                        </div>                        
+                        </div>
                         <h6>商城用户说明</h6>
                         <p>可以在前台进行登录并且进行购物</p>
                         <p>前台也可以注册用户</p>

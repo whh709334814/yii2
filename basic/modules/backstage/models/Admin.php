@@ -19,7 +19,13 @@ class Admin extends ActiveRecord implements \yii\web\IdentityInterface
     public function behaviors()
     {
         return [
-            TimestampBehavior::className(),
+            [
+                'class' => TimestampBehavior::className(),
+                'attributes' => [
+                    ActiveRecord::EVENT_BEFORE_INSERT => ['createtime'],
+//                    ActiveRecord::EVENT_BEFORE_UPDATE => ['updated_at'],
+                ],
+            ],
         ];
     }
     public function attributeLabels()
@@ -127,6 +133,7 @@ class Admin extends ActiveRecord implements \yii\web\IdentityInterface
         if ($this->load($data) && $this->validate()) {
             // $this->adminpass = md5($this->adminpass);
             $this->adminpass = Yii::$app->getSecurity()->generatePasswordHash($this->adminpass);
+
             if ($this->save(false)) {
                 return true;
             }

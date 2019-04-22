@@ -118,6 +118,8 @@ function leftMenu($where){
                 foreach ($vv['items'] as $kkk=>$vvv){
                     if (in_array($where,$vvv['url'])==true){
                         return $v['items'];
+                    }else{
+                        $flag = 2;
                     }
                 }
             }

@@ -5,58 +5,37 @@
     $this->params['breadcrumbs'][] = ['label' => '规则管理', 'url' => ['/admin/rbac/rules']];
     $this->params['breadcrumbs'][] = $this->title;
 ?>
-    <!-- main container -->
-        <div class="container-fluid">
-            <div id="pad-wrapper" class="new-user">
-                <div class="row-fluid header">
-                    <h3>添加规则</h3>
-                </div>
-                <div class="row-fluid form-wrapper">
-                    <!-- left column -->
-                    <div class="span9 with-sidebar">
-                        <div class="container">
-                                <?php
-                                if (Yii::$app->session->hasFlash('info')) {
-                                    echo Yii::$app->session->getFlash('info');
-                                }
-                                $form = ActiveForm::begin([
-                                    'fieldConfig' => [
-                                        'template' => '<div class="span12 field-box">{label}{input}</div>{error}',
-                                    ],
-                                    'options' => [
-                                        'class' => 'new_user_form inline-input',
-                                    ],
-                                ]);
-                                /*echo $form->field($model, 'username')->textInput(['class' => 'span9']);
-                                echo $form->field($model, 'useremail')->textInput(['class' => 'span9']);
-                                echo $form->field($model, 'userpass')->passwordInput(['class' => 'span9']);
-                                echo $form->field($model, 'repass')->passwordInput(['class' => 'span9']);
-                                 */
-?>
-                                <div class="span12 field-box">
-                                <?php echo Html::label('类名称', null). Html::textInput('class_name', '', ['class' => 'span9']); ?>
-                                </div>
-                                
-                                <div class="span11 field-box actions">
-                                    <?php echo Html::submitButton('添加', ['class' => 'btn-glow primary']); ?>
-                                    <span>OR</span>
-                                    <?php echo Html::resetButton('取消', ['class' => 'reset']); ?>
-                                </div>
-                            <?php ActiveForm::end(); ?>
-                        </div>
-                    </div>
+<div class="callout callout-info">
+    Tips:
+    <i class="icon-lightbulb pull-left"></i>
+    请在左侧填写管理员相关信息，包括管理员账号，电子邮箱，以及密码
+</div>
+<div class="box box-info">
+    <div class="box-header with-border">
 
-                    <!-- side right column -->
-                    <div class="span3 form-sidebar pull-right">
-                        <div class="alert alert-info hidden-tablet">
-                            <i class="icon-lightbulb pull-left"></i>
-                            请在左侧表单当中填入要添加的用户信息,包括用户名,密码,电子邮箱
-                        </div>                        
-                        <h6>商城用户说明</h6>
-                        <p>可以在前台进行登录并且进行购物</p>
-                        <p>前台也可以注册用户</p>
-                    </div>
-                </div>
+    </div>
+    <?php
+    //        if (Yii::$app->session->hasFlash('info')) {
+    //            echo Yii::$app->session->getFlash('info');
+    //        }
+    $form = ActiveForm::begin([
+        'options' => ['class' => 'form-horizontal'],
+    ]);
+    ?>
+    <div class="box-body">
+        <div class="form-group">
+            <?php echo Html::label('名称', null, ['class' => 'col-sm-2 control-label']).'<div class="col-sm-6">'. Html::textInput('description', '', ['class' => 'form-control']); ?></div>
+    </div>
+    <div class="box-footer">
+        <div class=" form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <?= Html::submitButton('提交', ['class' => 'btn btn-primary']); ?>
+                <span>OR</span>
+                <?php echo Html::resetButton('取消', ['class' => 'btn btn-primary reset']); ?>
             </div>
         </div>
+    </div>
+    <?php ActiveForm::end() ?>
+    </div>
+</div>
     <!-- end main container -->
