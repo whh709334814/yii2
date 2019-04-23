@@ -5,8 +5,6 @@ use backstage\models\permission\search\OrganSearch;
 use backstage\components\BaseController;
 use backstage\models\Organ;
 use Yii;
-use yii\web\Response;
-use yii\bootstrap\ActiveForm;
 
 class OrganController extends BaseController
 {
@@ -22,10 +20,14 @@ class OrganController extends BaseController
     public function actionAdd(){
         $model = new Organ();
         if(Yii::$app->request->isPost){
-            $model->add(Yii::$app->request->post());
-        }else{
-            return $this->render('add', ['model'=>$model]);
+            $res = $model->add(Yii::$app->request->post());
+            if ($res) {
+                Yii::$app->session->setFlash('info', '添加成功');
+            } else {
+                Yii::$app->session->setFlash('info', '添加失败');
+            }
         }
+        return $this->render('add', ['model'=>$model]);
     }
 
     public function actionUpdate(){

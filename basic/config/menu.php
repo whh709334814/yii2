@@ -27,7 +27,8 @@ return [
             ['label' => '机构管理', 'url' => ['organ/site'],
                 'items' => [
                     ['label' => '机构列表', 'url' =>['organ/site']],
-//                    ['label' => '主页2', 'url' =>['rbac/roles']],
+                    ['label' => '添加机构', 'url' =>['organ/add'], 'options' => ['class' => 'hide']],
+                    ['label' => '更新机构', 'url' =>['organ/update'], 'options' => ['class' => 'hide']],
 //                    ['label' => '主页3', 'url' =>['rbac/createrule']],
                 ]
             ],
