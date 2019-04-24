@@ -83,8 +83,7 @@
       <path value="$PROJECT_DIR$/basic/vendor/phar-io/manifest" />
       <path value="$PROJECT_DIR$/basic/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-datepicker" />
-      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/bootstrap-fileinput" />
-      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-fileinput" />
+      <path value="$PROJECT_DIR$/basic/vendor/kartik-v/yii2-widget-alert" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />

@@ -23,6 +23,20 @@ use kartik\date\DatePicker;
         <div class="tab-content">
             <div class="active tab-pane" id="organ">
                 <?php
+
+                // widget with default options
+              //  echo Dialog::widget();
+                // buttons for testing the krajee dialog boxes
+                $btns = <<< HTML
+<button type="button" id="btn-alert" class="btn btn-info">Alert</button>
+<button type="button" id="btn-confirm" class="btn btn-warning">Confirm</button>
+<button type="button" id="btn-prompt" class="btn btn-primary">Prompt</button>
+<button type="button" id="btn-dialog" class="btn btn-default">Dialog</button>
+HTML;
+                echo $btns;
+
+                // javascript for triggering the dialogs
+
                 $form = ActiveForm::begin(['method'=>'post',
                     'fieldConfig' => [
                         'template' => '{label}<div class="col-sm-6">{input}</div>{error}',
@@ -52,11 +66,7 @@ use kartik\date\DatePicker;
                 <?= $form->field($model, 'score')->textInput(); ?>
                 <?= $form->field($model, 'click')->textInput(); ?>
                 <?= $form->field($model, 'intro')->textInput(); ?>
-
-                <?= $form->field($model, 'organ_logo')->widget(kartik\file\FileInput::classname(), [
-                    'options' => ['multiple' => true],
-                    'pluginOptions' => ['previewFileType' => 'any']
-                ]);?>
+                <?= $form->field($model, 'organ_logo')->textInput(); ?>
 
                 <?=
                 $form->field($model, 'organ_time')->widget(\kartik\date\DatePicker::className(),[
@@ -83,3 +93,12 @@ use kartik\date\DatePicker;
         </div>
     </div>
 </div>
+<?php
+$js = <<< JS
+$("#btn-alert").on("click", function() {
+     krajeeDialog.alert("This is a Krajee Dialog Alert!")
+});
+JS;
+
+// register your javascript
+$this->registerJs($js);
