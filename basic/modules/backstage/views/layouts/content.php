@@ -1,6 +1,7 @@
 <?php
 use yii\widgets\Breadcrumbs;
-use dmstr\widgets\Alert;
+//use dmstr\widgets\Alert;
+use kartik\dialog\Dialog;
 
 ?>
 <div class="content-wrapper">
@@ -30,7 +31,15 @@ use dmstr\widgets\Alert;
     </section>
 
     <section class="content">
-        <?= Alert::widget() ?>
+        <?php
+            use app\common\widget\Popup;
+        echo Dialog::widget(['overrideYiiConfirm' => true]);
+        ?>
+        <?= Popup::widget([
+            'title'=>'消息',
+            'size'=>'small'//参数不写会有默认值
+        ]) ?>
+        <?php //echo Alert::widget() ?>
 
             <?= $content ?>
 

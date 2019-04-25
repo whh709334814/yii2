@@ -17,11 +17,11 @@ return [
                     ['label' => '授权', 'url' =>['manage/assign'], 'options' => ['class' => 'hide']],
                 ]
             ],
-    //                ['label' => '个人中心', 'url' => ['manage/managers'],
-    //                    'items' => [
-    //                        ['label' => '修改密码', 'url' => ['/admin/personal/reset-password']],
-    //                    ]
-    //                ]
+            ['label' => '个人中心', 'url' => ['personal/reset-password'],
+                'items' => [
+                    ['label' => '修改密码', 'url' => ['personal/reset-password']],
+                ]
+            ]
         ]],
         ['label'=>'主页','url'=>['organ/site'], 'items'=>[
             ['label' => '机构管理', 'url' => ['organ/site'],

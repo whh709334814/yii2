@@ -1,13 +1,11 @@
 <?php
 
-use kartik\file\FileInput;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 $this->title = '机构更新';
 $this->params['breadcrumbs'][] = ['label' => '机构列表', 'url' => ['organ/site']];
 $this->params['breadcrumbs'][] = $this->title;
-use kartik\date\DatePicker;
 ?>
 <div class="callout callout-info">
     Tips:
@@ -67,7 +65,6 @@ HTML;
                 <?= $form->field($model, 'click')->textInput(); ?>
                 <?= $form->field($model, 'intro')->textInput(); ?>
                 <?= $form->field($model, 'organ_logo')->textInput(); ?>
-
                 <?=
                 $form->field($model, 'organ_time')->widget(\kartik\date\DatePicker::className(),[
                     'type' => \kartik\date\DatePicker::TYPE_COMPONENT_APPEND,
@@ -94,9 +91,16 @@ HTML;
     </div>
 </div>
 <?php
+
 $js = <<< JS
 $("#btn-alert").on("click", function() {
-     krajeeDialog.alert("This is a Krajee Dialog Alert!")
+     // krajeeDialog.alert("This is a Krajee Dialog Alert!")
+    
+    krajeeDialog.prompt({label:'Provide reason', placeholder:'Upto 30 characters...'}, function(out){
+        if (out) {
+            alert('Yes'); // or do something based on the value of out
+        }
+    });
 });
 JS;
 

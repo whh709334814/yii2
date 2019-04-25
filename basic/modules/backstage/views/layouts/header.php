@@ -36,7 +36,6 @@ use yii\helpers\Html;
                             <li class="user-header">
                                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle"
                                      alt="User Image"/>
-
                                 <p>
                                     <?= yii::$app->admin->identity->adminuser ?> - Web Developer
                                     <small>Member since Nov. 2012</small>
@@ -57,7 +56,7 @@ use yii\helpers\Html;
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="javascript: void (0)" id="restpassword" class="btn btn-default btn-flat">修改密码</a>
                                 </div>
                                 <div class="pull-right">
                                     <?= Html::a(
@@ -77,3 +76,24 @@ use yii\helpers\Html;
         </div><!-- /.container-fluid -->
     </nav>
 </header>
+<?php
+$js = <<<JS
+    // $("#restpassword").on('click',function() {
+    //    BootstrapDialog.show({
+    //         title: '加载远程页面',
+    //         message: function (dialog) {
+    //             var message = $('<div></div>');
+    //             var pageToLoad = dialog.getData('pageToLoad');
+    //             message.load(pageToLoad);
+    //             return message;
+    //         },
+    //         size: BootstrapDialog.SIZE_WIDE,
+    //         cssClass: "fade",
+    //         closeable: true,
+    //         data: {
+    //             'pageToLoad': '/Home/Load?msg=' + '我来自遥远的地方...'
+    //         }
+    //     });
+    // })
+JS;
+$this->registerJs($js);
