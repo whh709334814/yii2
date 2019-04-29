@@ -34,7 +34,7 @@ $this->registerCssFile('admin/css/compiled/new-user.css');
                 <?php echo Html::label('角色子节点', null,['class'=>'col-sm-2 control-label']).'<div class="col-sm-10">'. Html::checkboxList('children',$children? $children['roles']:'', $roles); ?></div>
             </div>
             <div class="form-group">
-                <?php echo Html::label('权限子节点', null,['class'=>'col-sm-2 control-label']).'<div class="col-sm-10">'. Html::checkboxList('children', $children?$children['permissions']:'', $permissions,['class'=>'col-sm-10']); ?></div>
+                <?php echo Html::label('权限子节点', null,['class'=>'col-sm-2 control-label']).'<div class="col-sm-10">'. Html::checkboxList('children', $children??'', $permissions,['class'=>'col-sm-10']); ?></div>
             </div>
         </div>
         <div class="box-footer">
