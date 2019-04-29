@@ -1,16 +1,15 @@
 <?php
 
-namespace app\controllers;
+namespace front\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
-//use app\models\ContactForm;
-use yii\rbac\DbManager;
-
+//use front\models\LoginForm;
+//use front\models\ContactForm;
+use  front\models\{ContactForm, LoginForm};
 class SiteController extends Controller
 {
     /**
@@ -73,13 +72,14 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = 'layout1';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect(['/front/']);
         }
 
         $model->password = '';

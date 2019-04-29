@@ -4,7 +4,7 @@ namespace backstage\controllers;
 
 use yii\data\Pagination;
 use app\models\User;
-use app\models\Profile;
+//use app\models\Profile;
 use Yii;
 use backstage\components\BaseController;
 

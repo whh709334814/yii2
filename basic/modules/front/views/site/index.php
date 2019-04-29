@@ -3,35 +3,7 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
-
-use yii\bootstrap\Nav;
-
-echo Nav::widget([
-    'items' => [
-        [
-            'label' => 'Home',
-            'url' => ['site/index'],
-            'linkOptions' => ['class'=>'style'],  //设置链接的样式
-        ],
-        [
-            'label' => 'Dropdown',
-            'items' => [
-                ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
-                '<li class="divider"></li>',
-                '<li class="dropdown-header">Dropdown Header</li>',
-                ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
-            ],
-        ],
-        [
-            'label' => 'Login',
-            'url' => ['site/login'],
-            'visible' => Yii::$app->user->isGuest
-        ],
-    ],
-    'options' => ['class' =>'nav-pills'], // 设置导航的样式
-]);
 ?>
-
 <div class="site-index">
 
     <div class="jumbotron">

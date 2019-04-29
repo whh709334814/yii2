@@ -35,6 +35,7 @@ class Admin extends ActiveRecord implements \yii\web\IdentityInterface
             'adminemail' => '管理员邮箱',
             'adminpass' => '管理员密码',
             'repass' => '确认密码',
+            'rememberMe'=> '记住我'
         ];
     }
 
@@ -158,7 +159,7 @@ class Admin extends ActiveRecord implements \yii\web\IdentityInterface
      */
     public function setPassword($password)
     {
-        $this->password_hash = Yii::$app->security->generatePasswordHash($password);
+        $this->adminpass = Yii::$app->security->generatePasswordHash($password);
     }
 
     public static function findIdentity($id)

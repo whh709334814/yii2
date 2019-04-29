@@ -8,6 +8,7 @@ use Yii;
 
 class OrganController extends BaseController
 {
+
     public function actionSite()
     {
         $model = new OrganSearch();

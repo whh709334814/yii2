@@ -45,25 +45,6 @@ class BaseController extends Controller
             ],
         ];
     }
-    /**
-     * flash message
-     */
-//    private function flash()
-//    {
-//        if($this->route == '/admin/site/close-win') {
-//            return;
-//        }
-//        $levels = [0=>'warning',1=>'success',2=>'fail',6=>'info'];
-//        foreach ($levels as $icon => $level) {
-//            if(Yii::$app->session->hasFlash($level))
-//            {
-//                $msg = Yii::$app->session->getFlash($level);
-//                $this->getView()->registerJs("
-//                    layer.msg(\"$msg\", {icon: $icon});
-//                ");
-//            }
-//        }
-//    }
 //    public function beforeAction($action)
 //    {
 //        if (!parent::beforeAction($action)) {

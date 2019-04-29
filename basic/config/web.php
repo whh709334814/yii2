@@ -10,25 +10,10 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
-//        '@mdm/admin' => '@vendor/mdmsoft/yii2-admin/migrations',
         '@backstage' => '@app/modules/backstage',
         '@front' => '@app/modules/front',
     ],
     'modules' => [
-//        'admin' => [
-//            'class' => 'mdm\admin\Module',
-//            'layout' => 'left-menu', // it can be '@path/to/your/layout'.@backstage/views/layouts/layout1
-//            'controllerMap' => [
-//                'assignment' => [
-//                    'class' => 'mdm\admin\controllers\AssignmentController',
-//                    'userClassName' => 'app\modules\backstage\models\User',
-//                    'idField' => 'user_id'
-//                ],
-//                'other' => [
-//                    //'class' => 'app\modules\backstage\Module', // add another controller
-//                ],
-//            ],
-//        ],
         'backstage' => [
             'class' => 'app\modules\backstage\Module',
         ],
@@ -60,11 +45,11 @@ $config = [
             "defaultRoles" => ["guest"],
         ],
         'user' =>[
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'front\models\User',
             'idParam' => '__front',
             'identityCookie' => ['name' => '__front_identity', 'httpOnly' => true],
             'enableAutoLogin' => true,
-            'loginUrl' => ['public/login'],
+            'loginUrl' => ['/front/site/login'],
         ],
         'admin' => [
             'class' => 'yii\web\User',

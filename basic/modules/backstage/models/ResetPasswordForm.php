@@ -15,7 +15,7 @@ use Yii;
  */
 class ResetPasswordForm extends Model
 {
-    public $password;
+    public $adminpass;
     public $repassword;
 
 
@@ -25,9 +25,9 @@ class ResetPasswordForm extends Model
     public function rules()
     {
         return [
-            [['password','repassword'], 'required'],
-            [['password','repassword'], 'string', 'min' => 6],
-            ['repassword', 'compare', 'compareAttribute' => 'password','message'=>'两次输入的密码不一致！'],
+            [['adminpass','repassword'], 'required'],
+            [['adminpass','repassword'], 'string', 'min' => 6],
+            ['repassword', 'compare', 'compareAttribute' => 'adminpass','message'=>'两次输入的密码不一致！'],
         ];
     }
 
@@ -39,7 +39,7 @@ class ResetPasswordForm extends Model
     public function resetPassword()
     {
         $user = $this->_user;
-        $user->setPassword($this->password);
+        $user->setPassword($this->adminpass);
 
         return $user->save();
     }
@@ -50,7 +50,7 @@ class ResetPasswordForm extends Model
     public function attributeLabels()
     {
         return [
-            'password' => '新密码',
+            'adminpass' => '新密码',
             'repassword' => '确认密码'
         ];
     }

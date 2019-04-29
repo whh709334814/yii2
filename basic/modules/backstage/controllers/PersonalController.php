@@ -7,20 +7,22 @@ use Yii;
 use backstage\models\Admin;
 class PersonalController extends BaseController
 {
+    protected $mustlogin = ['reset-password'];
     public function actionResetPassword()
     {
         $model = new ResetPasswordForm();
         if($model->load(Yii::$app->request->post()) && $model->validate()) {
-            $user = Admin::findOne(Yii::$app->user->id);
-            $user->setPassword($model->password);
+            $user = Admin::findOne(Yii::$app->admin->id);
+            $user->setPassword($model->adminpass);
             if($user->save()) {
                 Yii::$app ->session->setFlash('success','修改密码成功');
-                return $this->goHome();
+                Yii::$app->admin->logout(false);
+                return $this->goback();
             }
         }
-        return $this->render('reset-password', [
-            'model' => $model,
-        ]);
+            return $this->render('reset-password', [
+                'model' => $model,
+            ]);
     }
 
 }

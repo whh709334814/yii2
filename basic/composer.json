@@ -22,7 +22,8 @@
         "dmstr/yii2-adminlte-asset": "^2.1",
         "kartik-v/yii2-tree-manager": "@dev",
         "kartik-v/yii2-widget-datepicker": "@dev",
-        "kartik-v/yii2-dialog": "*"
+        "kartik-v/yii2-dialog": "*",
+        "yiisoft/yii2-authclient": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
